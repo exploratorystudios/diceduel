@@ -31,10 +31,17 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       position: relative;
     }
-    .printable-link {
+    .download-container {
       position: absolute;
       top: 20px;
       right: 20px;
+      text-align: center;
+    }
+    .download-container p {
+      margin: 0 0 5px;
+      font-size: 0.9em;
+    }
+    .printable-link {
       background: #333;
       color: #fff;
       padding: 5px 10px;
@@ -68,8 +75,11 @@
 </head>
 <body>
   <div class="content">
-    <!-- Printable Docx Link -->
-    <a href="Dice Duel.docx" download class="printable-link">Printable Docx</a>
+    <!-- Download Container -->
+    <div class="download-container">
+      <p>Click Here To Download:</p>
+      <a href="Dice Duel.docx" download class="printable-link">Printable Docx</a>
+    </div>
     
     <header>
       <h1>Dice Duel</h1>

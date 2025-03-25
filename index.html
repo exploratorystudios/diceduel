@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Duel - Full Card Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header, section {
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .printable-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 8px;
+      text-align: left;
+      font-size: 0.9em;
+    }
+    th {
+      background-color: #ddd;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Printable Docx Link -->
+    <a href="Dice Duel.docx" download class="printable-link">Printable Docx</a>
+    
+    <header>
+      <h1>Dice Duel</h1>
+      <p><strong>Objective:</strong> Reduce your opponent’s health points to 0.</p>
+    </header>
+
+    <section id="components">
+      <h2>Components</h2>
+      <ul>
+        <li>Standard 52-card deck</li>
+        <li>Set of DnD dice (d4, d6, d8, 2d10, d12, d20)</li>
+        <li>Health tokens (each player starts with 20 health; maximum health is 20)</li>
+      </ul>
+    </section>
+
+    <section id="setup">
+      <h2>Setup</h2>
+      <ul>
+        <li><strong>Deck and Hand:</strong> Each player shuffles the deck and draws 5 cards to form their initial hand.</li>
+        <li><strong>Health:</strong> Each player starts with 20 health points.</li>
+        <li><strong>Turn Order:</strong> Decide who goes first by each rolling a d20; the highest roll goes first (reroll on a tie).</li>
+      </ul>
+    </section>
+
+    <section id="turn-structure">
+      <h2>Turn Structure</h2>
+      <p>Each turn consists of two phases:</p>
+      <h3>1. Duel Phase</h3>
+      <ul>
+        <li><strong>Play a Card:</strong> Both players choose one card from their hand and place it face-down.</li>
+        <li><strong>Reveal & Resolve:</strong> Once both cards are set, reveal them simultaneously.</li>
+        <li><strong>Simultaneous Damage & Defense:</strong> If one or both revealed cards have attack (Clubs) or defense (Spades) effects, roll their respective dice at the same time. Then, subtract the defense roll from the damage roll before applying any damage. If the defense is equal to or exceeds the damage, no damage is dealt.</li>
+        <li><strong>Timing:</strong> Any healing effects resolve after damage effects.</li>
+        <li><strong>Effect Resolution:</strong> Resolve each card’s effect based on its suit and rank (see Card Effects below).</li>
+        <li><strong>Discard:</strong> After resolving effects, the played cards are moved to a discard pile.</li>
+      </ul>
+      <h3>2. Draw Phase</h3>
+      <ul>
+        <li><strong>Replenish Hand:</strong> Each player draws cards from the deck until they have 5 cards in hand.</li>
+        <li>If a player already has 5 or more cards, they do not draw.</li>
+      </ul>
+      <p>Repeat the above turn phases until one player’s health is reduced to 0.</p>
+    </section>
+
+    <section id="card-effects">
+      <h2>Card Effects by Suit and Rank</h2>
+      <p>The following tables list the card effects for each suit:</p>
+
+      <div class="grid-container">
+        <!-- Hearts Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Hearts</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2–5</td>
+              <td>Roll a d4 to heal.</td>
+            </tr>
+            <tr>
+              <td>6–8</td>
+              <td>Roll a d6 to heal.</td>
+            </tr>
+            <tr>
+              <td>9–10</td>
+              <td>Roll a d8 to heal.</td>
+            </tr>
+            <tr>
+              <td>Jack (J)</td>
+              <td>Greater Healing – Roll a d10 to heal. You may reroll the die once.</td>
+            </tr>
+            <tr>
+              <td>Queen (Q)</td>
+              <td>Guardian Angel – Prevent the next 5 damage you would take this turn.</td>
+            </tr>
+            <tr>
+              <td>King (K)</td>
+              <td>Royal Perseverance – Roll a d12 to heal. If the result is 6 or higher, restore an additional 2 health.</td>
+            </tr>
+            <tr>
+              <td>Ace (A)</td>
+              <td>Divine Intervention – Roll a d20; restore health equal to the result. (You can only play one Ace of Hearts per game.)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Spades Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Spades</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2–5</td>
+              <td>Roll a d4 for defense.</td>
+            </tr>
+            <tr>
+              <td>6–8</td>
+              <td>Roll a d6 for defense.</td>
+            </tr>
+            <tr>
+              <td>9–10</td>
+              <td>Roll a d8 for defense.</td>
+            </tr>
+            <tr>
+              <td>Jack (J)</td>
+              <td>Sly Shift – You may discard this card before dueling. Choose a card from your opponent’s hand for them to reveal.</td>
+            </tr>
+            <tr>
+              <td>Queen (Q)</td>
+              <td>Regal Defense – Before drawing, your opponent must reveal the top card of their deck. Their current attack deals no damage.</td>
+            </tr>
+            <tr>
+              <td>King (K)</td>
+              <td>Royal Decree – Negate the effects of the card your opponent plays.</td>
+            </tr>
+            <tr>
+              <td>Ace (A)</td>
+              <td>Divine Boon – Your next attack cannot be defended against. (This card has no immediate effect when played; leave it face-up until you attack, then discard it.)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Clubs Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Clubs</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2–5</td>
+              <td>Roll a d4 for attack.</td>
+            </tr>
+            <tr>
+              <td>6–8</td>
+              <td>Roll a d6 for attack.</td>
+            </tr>
+            <tr>
+              <td>9–10</td>
+              <td>Roll a d8 for attack.</td>
+            </tr>
+            <tr>
+              <td>Jack (J)</td>
+              <td>Nimble Strike – Roll a d10 for attack. If the result is odd, add +1 to the damage.</td>
+            </tr>
+            <tr>
+              <td>Queen (Q)</td>
+              <td>Rallying Cry – When drawing cards in the Draw Phase, you may discard this card to draw an additional card, bringing your hand to six cards.</td>
+            </tr>
+            <tr>
+              <td>King (K)</td>
+              <td>Mighty Blow – Roll a d12 for attack. If the result is 6 or higher, deal an additional 2 damage.</td>
+            </tr>
+            <tr>
+              <td>Ace (A)</td>
+              <td>Divine Smite – Roll a d20; deal damage equal to the result.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Diamonds Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Diamonds</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2–5</td>
+              <td>Roll a d4; draw cards equal to the result.</td>
+            </tr>
+            <tr>
+              <td>6–8</td>
+              <td>Look at the top two cards of your deck. Choose one to place back on top and the other to send to the bottom.</td>
+            </tr>
+            <tr>
+              <td>9–10</td>
+              <td>You may discard one card from your hand to draw two new cards.</td>
+            </tr>
+            <tr>
+              <td>Jack (J)</td>
+              <td>Tactical Retreat – In response to taking damage, you may discard this card to draw two new cards.</td>
+            </tr>
+            <tr>
+              <td>Queen (Q)</td>
+              <td>Insight – Look at the top four cards of your deck and rearrange them in any order on top.</td>
+            </tr>
+            <tr>
+              <td>King (K)</td>
+              <td>Royal Boost – You may reveal this card after attacking and discard it. If you do, in addition to your attack roll, roll two d6 and take the higher result.</td>
+            </tr>
+            <tr>
+              <td>Ace (A)</td>
+              <td>Divine Luck – You may discard this card any time you roll a die. When rolling, roll that die twice and add the results together (unless another Ace was played).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="additional-rules">
+      <h2>Additional Rules</h2>
+      <ul>
+        <li><strong>Healing Cap:</strong> A player’s health cannot exceed 20.</li>
+        <li><strong>Resolution Order:</strong> When the played cards in the Duel Phase have both healing and damaging effects, the damaging effect is applied first.</li>
+        <li><strong>Game End:</strong> The game ends immediately when one player's health reaches 0. That player loses, and the opponent wins.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
